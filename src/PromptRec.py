@@ -28,7 +28,7 @@ fpath = "../datasets/downstream_tasks/"
 full_list = list(filter(lambda x: os.path.isdir(fpath + x), os.listdir(fpath)))
 cls = {"ml-100k": (MovieLensMeta, MovieLensData)}
 plms = [
-        (True, "../../IIFT/weights/llama/hf_models/7B/", "clm", "", "In short, the user's attitude towards the item is [::MASK::]"),
+        (True, "meta-llama/Llama-2-7b-hf", "clm", "", "In short, the user's attitude towards the item is [::MASK::]"),
         (True, "prajjwal1/bert-tiny", "mlm", "", "In short, the user feels [::MASK::] about the item."),
         (True, "prajjwal1/bert-mini", "mlm", "", "In short, the user feels [::MASK::] about the item."),
         (True, "prajjwal1/bert-small", "mlm", "", "In short, the user feels [::MASK::] about the item."),
