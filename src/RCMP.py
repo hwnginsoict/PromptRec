@@ -26,9 +26,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = CUDA
 fpath = "../datasets/downstream_tasks/"
 full_list = list(filter(lambda x: os.path.isdir(fpath + x), os.listdir(fpath)))
 simple_name = {"mexico_restaurant": "restaurant", "coupon": "coupon", "ml-100k": "movie"}
-cls = {"mexico_restaurant": (RestaurantMeta, RestaurantData),
-       "ml-100k": (MovieLensMeta, MovieLensData),
-       "coupon": (CouponsMeta, CouponsData)}
+cls = {"ml-100k": (MovieLensMeta, MovieLensData)}
 
 
 if __name__ == "__main__":

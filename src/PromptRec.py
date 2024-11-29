@@ -26,9 +26,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = CUDA
 shots = int(sys.argv[3]) if len(sys.argv) > 3 else None
 fpath = "../datasets/downstream_tasks/"
 full_list = list(filter(lambda x: os.path.isdir(fpath + x), os.listdir(fpath)))
-cls = {"mexico_restaurant": (RestaurantMeta, RestaurantData),
-       "ml-100k": (MovieLensMeta, MovieLensData),
-       "coupon": (CouponsMeta, CouponsData)}
+cls = {"ml-100k": (MovieLensMeta, MovieLensData)}
 plms = [
         (True, "../../IIFT/weights/llama/hf_models/7B/", "clm", "", "In short, the user's attitude towards the item is [::MASK::]"),
         (True, "prajjwal1/bert-tiny", "mlm", "", "In short, the user feels [::MASK::] about the item."),

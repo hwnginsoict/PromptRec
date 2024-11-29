@@ -35,9 +35,7 @@ device = "cuda:%s" % CUDA
 tc.cuda.set_device(int(CUDA))
 os.environ["CUDA_VISIBLE_DEVICES"] = CUDA
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
-cls = {"mexico_restaurant": (RestaurantMeta, RestaurantData),
-       "ml-100k": (MovieLensMeta, MovieLensData),
-       "coupon": (CouponsMeta, CouponsData)}
+cls = {"ml-100k": (MovieLensMeta, MovieLensData)}
 
 
 

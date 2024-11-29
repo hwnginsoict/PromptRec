@@ -25,9 +25,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = CUDA
 
 fpath = "../datasets/downstream_tasks/"
 full_list = list(filter(lambda x: os.path.isdir(fpath + x), os.listdir(fpath)))
-cls = {"mexico_restaurant": (RestaurantMeta, RestaurantData),
-       "ml-100k": (MovieLensMeta, MovieLensData),
-       "coupon": (CouponsMeta, CouponsData)}
+cls = {"ml-100k": (MovieLensMeta, MovieLensData)}
 plms = [
         ("prajjwal1/bert-tiny", "mlm", "", "In short, the user feels [::MASK::] about the item."),
         ("prajjwal1/bert-mini", "mlm", "", "In short, the user feels [::MASK::] about the item."),
